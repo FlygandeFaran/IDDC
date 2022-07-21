@@ -1,0 +1,10 @@
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\bin\Debug\IDDC.exe.config
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\bin\Debug\IDDC.exe
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\bin\Debug\IDDC.pdb
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC_.csprojAssemblyReference.cache
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC.MainWindow.resources
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC.Properties.Resources.resources
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC_.csproj.GenerateResource.cache
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC_.csproj.CoreCompileInputs.cache
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC.exe
+G:\Gemensam\Till-folders and personal folders\Erik_Fura\02 Programmering\C# scripting\IDDC\IDDC\obj\Debug\IDDC.pdb
