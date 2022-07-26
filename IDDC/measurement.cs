@@ -21,7 +21,7 @@ namespace IDDC
         private double r20;
         private double r10;
         private double m_FWHM;
-        private double r80r10;
+        private double r90r10;
         private double r80r20;
         private double d20;
         private double maxPlateau;
@@ -72,8 +72,8 @@ namespace IDDC
 
         public double R80R10
         {
-            get { return r80r10; }
-            set { r80r10 = value; }
+            get { return r90r10; }
+            set { r90r10 = value; }
         }
 
 
@@ -194,7 +194,7 @@ namespace IDDC
                 r20 = interpolateBefore(0.2);
                 r10 = interpolateBefore(0.1);
                 m_FWHM = r50Right - r50Left;
-                r80r10 = r10 - r80Right;
+                r90r10 = r10 - r90Right;
                 r80r20 = r20 - r80Right;
                 d20 = DoseinterpolateBefore();
                 maxPlateau = dMax / d20;
@@ -212,10 +212,11 @@ namespace IDDC
                 r20 = interpolateAfter(0.2);
                 r10 = interpolateAfter(0.1);
                 m_FWHM = r50Right - r50Left;
-                r80r10 = r10 - r80Right;
+                r90r10 = r10 - r90Right;
                 r80r20 = r20 - r80Right;
                 d20 = DoseinterpolateAfter();
                 maxPlateau = dMax / d20;
+                
             }
 
             measurementData[0] = name;
@@ -229,7 +230,7 @@ namespace IDDC
             measurementData[8] = Math.Round(r20, 2);
             measurementData[9] = Math.Round(r10, 2);
             measurementData[10] = Math.Round(m_FWHM, 2);
-            measurementData[11] = Math.Round((r80r10), 2);
+            measurementData[11] = Math.Round((r90r10), 2);
             measurementData[12] = Math.Round((r80r20), 2);
             measurementData[13] = Math.Round(d20, 2);
             measurementData[14] = Math.Round(maxPlateau, 2);
@@ -248,6 +249,8 @@ namespace IDDC
                 int lowerIndex = m_dose.IndexOf(roundedDose);
 
                 z_interpolated = m_z.ElementAt(lowerIndex) + (dMax * percent - m_dose.ElementAt(lowerIndex)) * (m_z.ElementAt(lowerIndex + 1) - m_z.ElementAt(lowerIndex)) / (m_dose.ElementAt(lowerIndex + 1) - m_dose.ElementAt(lowerIndex));
+                if (upsideDown)
+                    z_interpolated = m_z.ElementAt(lowerIndex) + (dMax * percent - m_dose.ElementAt(lowerIndex)) * (m_z.ElementAt(lowerIndex) - m_z.ElementAt(lowerIndex - 1)) / (m_dose.ElementAt(lowerIndex) - m_dose.ElementAt(lowerIndex - 1));
             }
             catch
             {
@@ -264,6 +267,8 @@ namespace IDDC
                 int lowerIndex = m_dose.LastIndexOf(roundedDose);
 
                 z_interpolated = m_z.ElementAt(lowerIndex) + (dMax * percent - m_dose.ElementAt(lowerIndex)) * (m_z.ElementAt(lowerIndex + 1) - m_z.ElementAt(lowerIndex)) / (m_dose.ElementAt(lowerIndex + 1) - m_dose.ElementAt(lowerIndex));
+                if (upsideDown)
+                    z_interpolated = m_z.ElementAt(lowerIndex) + (dMax * percent - m_dose.ElementAt(lowerIndex)) * (m_z.ElementAt(lowerIndex) - m_z.ElementAt(lowerIndex - 1)) / (m_dose.ElementAt(lowerIndex) - m_dose.ElementAt(lowerIndex - 1));
             }
             catch
             {

@@ -105,7 +105,9 @@ namespace IDDC
                         series.Points.AddXY(meas.Z[i], meas.Dose[i]);
                     }
                     series.ChartType = SeriesChartType.Spline;
+                    series.MarkerStyle = MarkerStyle.Circle;
                     series.Name = meas.ToString();
+
                 }
                 catch { }
 
@@ -275,7 +277,7 @@ namespace IDDC
             dt.Columns.Add("R20", typeof(double)); // lägger till plan som rubrik
             dt.Columns.Add("R10", typeof(double)); // lägger till plan som rubrik
             dt.Columns.Add("FWHM", typeof(double)); // lägger till plan som rubrik
-            dt.Columns.Add("R80-R10", typeof(double)); // lägger till plan som rubrik
+            dt.Columns.Add("R90-R10", typeof(double)); // lägger till plan som rubrik
             dt.Columns.Add("R80-R20", typeof(double)); // lägger till plan som rubrik
             dt.Columns.Add("D20", typeof(double)); // lägger till plan som rubrik
             dt.Columns.Add("Max/plateau", typeof(double)); // lägger till plan som rubrik

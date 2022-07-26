@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnImport);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "BraggPeakAnalyser (v 1.0 by Erik Fura)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepthDoseCurve)).EndInit();
             this.ResumeLayout(false);
